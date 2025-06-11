@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="4;url=presente.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carregando...</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #ff4d6d;
+      text-align: center;
+    }
+
+    .heart {
+      width: 50px;
+      height: 50px;
+      background-color: #ff4d6d;
+      position: relative;
+      transform: rotate(-45deg);
+      animation: heartbeat 1s infinite;
+      margin-bottom: 20px;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      width: 50px;
+      height: 50px;
+      background-color: #ff4d6d;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .heart::before {
+      top: -25px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 25px;
+      top: 0;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1) rotate(-45deg);
+      }
+      50% {
+        transform: scale(1.2) rotate(-45deg);
+      }
+    }
+
+    .carregando {
+      font-size: 1.2em;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .fotos {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .polaroid {
+      background: white;
+      padding: 10px;
+      width: 180px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(255, 77, 109, 0.5);
+      border-radius: 5px;
+      transform: rotate(-2deg);
+    }
+
+    .polaroid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+
+
+    .caption {
+      margin-top: 10px;
+      font-size: 0.9em;
+      font-weight: bold;
+      color: #ff4d6d;
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+  <source src="musica.mp3.mp3" type="audio/mpeg">
+  Seu navegador não suporta áudio.
+</audio>
+
+  <h1>Vamos ver se você vai ganhar presente… 🎁</h1>
+  <div class="heart"></div>
+  <div class="carregando">Carregando com amor...</div>
+
+  <div class="fotos">
+    <div class="polaroid">
+      <img src="foto1.jpg.jpg" alt="Foto 1">
+      <div class="caption">Nosso amor é meu lugar favorito ❤️</div>
+    </div>
+    <div class="polaroid">
+      <img src="foto2.jpg.jpg" alt="Foto 2">
+      <div class="caption">Você é meu porto seguro 🌹</div>
+    </div>
+    <div class="polaroid">
+      <img src="foto3.jpg.jpg" alt="Foto 3">
+      <div class="caption">Com você, todo dia é especial 💘</div>
+    </div>
+  </div>
+</body>
+</html>
